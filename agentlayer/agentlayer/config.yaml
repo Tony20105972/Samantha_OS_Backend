@@ -1,0 +1,5 @@
+# agentlayer/config.yaml
+
+default_agent: myagent
+agents:
+  - myagent
