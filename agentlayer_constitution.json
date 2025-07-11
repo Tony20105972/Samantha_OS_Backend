@@ -1,0 +1,6 @@
+{
+  "rules": [
+    {"id": "R1", "type": "keyword", "keywords": ["sudo", "rm -rf", "nuke", "delete files", "malicious", "harmful", "unethical"], "severity": "high"},
+    {"id": "R2", "type": "role", "allowed_roles": ["developer", "analyst", "architect"], "severity": "medium"}
+  ]
+}
