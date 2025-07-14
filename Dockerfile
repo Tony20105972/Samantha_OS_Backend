@@ -1,4 +1,4 @@
-# Python 3.10 slim 버전 사용
+# Python 베이스 이미지
 FROM python:3.10-slim
 
 # 작업 디렉토리 설정
@@ -8,8 +8,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 전체 프로젝트 복사
+# 전체 코드 복사
 COPY . .
 
-# FastAPI 앱 실행 (agentlayer_api.py 안에 app 객체가 있어야 함)
-CMD ["uvicorn", "agentlayer_api:app", "--host", "0.0.0.0", "--port", "8000"]
+# 포트 설정 (FastAPI 기본)
+EXPOSE 8000
+
+# 애플리케이션 실행 (agentlayer/api.py 내부의 app)
+CMD ["uvicorn", "agentlayer.api:app", "--host", "0.0.0.0", "--port", "8000"]
