@@ -1,0 +1,13 @@
+# .dockerignore
+
+.DS_Store
+.Trash
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.idea/
+.vscode/
+*.log
