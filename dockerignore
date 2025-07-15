@@ -1,13 +1,7 @@
-# .dockerignore
-
-.DS_Store
 .Trash
+.DS_Store
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.env
-venv/
-.idea/
-.vscode/
-*.log
+*.sock
+.docker/
+.fly/
